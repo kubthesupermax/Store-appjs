@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Orders - ShopEase</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <h1>ShopEase</h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search products..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="orders.html" class="active">My Orders</a>
+          <a href="tracking.html">Track Order</a>
+          <a href="checkout.html" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">3</span>
+          </a>
+          <a href="#" class="account-icon">
+            <i class="fas fa-user"></i>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-container">
+      <div class="account-sidebar">
+        <div class="user-info">
+          <div class="user-avatar">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <div class="user-details">
+            <h3>John Doe</h3>
+            <p>john.doe@example.com</p>
+          </div>
+        </div>
+        <ul class="account-menu">
+          <li>
+            <a href="#"><i class="fas fa-user"></i> Account Settings</a>
+          </li>
+          <li>
+            <a href="orders.html" class="active"
+              ><i class="fas fa-box"></i> My Orders</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-heart"></i> Wishlist</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-address-card"></i> Addresses</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-credit-card"></i> Payment Methods</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-bell"></i> Notifications</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="orders-container">
+        <div class="page-header">
+          <h1>My Orders</h1>
+        </div>
+
+        <div class="orders-filter">
+          <div class="filter-options">
+            <select name="time-filter">
+              <option value="all">All Orders</option>
+              <option value="last-30-days">Last 30 Days</option>
+              <option value="last-6-months">Last 6 Months</option>
+              <option value="last-year">Last Year</option>
+            </select>
+            <select name="status-filter">
+              <option value="all">All Status</option>
+              <option value="processing">Processing</option>
+              <option value="shipped">Shipped</option>
+              <option value="delivered">Delivered</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+          </div>
+          <div class="search-orders">
+            <input type="text" placeholder="Search orders..." />
+            <button><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+
+        <div class="orders-list">
+          <div class="order-card">
+            <div class="order-header">
+              <div class="order-info">
+                <h3>Order #SE-10234567</h3>
+                <p>Placed on April 19, 2025</p>
+              </div>
+              <div class="order-status">
+                <span class="status shipped">Shipped</span>
+                <a href="tracking.html?order=SE-10234567" class="track-link"
+                  >Track Order</a
+                >
+              </div>
+            </div>
+            <div class="order-items">
+              <div class="order-item">
+                <div class="item-image">
+                  <img
+                    src="/images/wireless-headphones.jpg"
+                    alt="Wireless Headphones"
+                  />
+                </div>
+                <div class="item-details">
+                  <h4>Wireless Headphones</h4>
+                  <p class="item-meta">Color: Black | Qty: 1</p>
+                  <p class="item-price">$89.99</p>
+                </div>
+              </div>
+              <div class="order-item">
+                <div class="item-image">
+                  <img src="/images/smart-watch.jpg" alt="Smart Watch" />
+                </div>
+                <div class="item-details">
+                  <h4>Smart Watch</h4>
+                  <p class="item-meta">Color: Silver | Qty: 1</p>
+                  <p class="item-price">$199.99</p>
+                </div>
+              </div>
+              <div class="order-item">
+                <div class="item-image">
+                  <img
+                    src="/images/Laptops-bestbuy.webp"
+                    alt="Laptop Backpack"
+                  />
+                </div>
+                <div class="item-details">
+                  <h4>Laptop Backpack</h4>
+                  <p class="item-meta">Color: Navy Blue | Qty: 1</p>
+                  <p class="item-price">$59.99</p>
+                </div>
+              </div>
+            </div>
+            <div class="order-footer">
+              <div class="order-total">
+                <p>Total: <span>$349.97</span></p>
+              </div>
+              <div class="order-actions">
+                <button class="btn-secondary">View Details</button>
+                <button class="btn-secondary">Buy Again</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-card">
+            <div class="order-header">
+              <div class="order-info">
+                <h3>Order #SE-10234455</h3>
+                <p>Placed on April 10, 2025</p>
+              </div>
+              <div class="order-status">
+                <span class="status delivered">Delivered</span>
+                <p class="delivery-date">Delivered on April 15, 2025</p>
+              </div>
+            </div>
+            <div class="order-items">
+              <div class="order-item">
+                <div class="item-image">
+                  <img src="/api/placeholder/80/80" alt="Coffee Maker" />
+                </div>
+                <div class="item-details">
+                  <h4>Coffee Maker</h4>
+                  <p class="item-meta">Color: Stainless Steel | Qty: 1</p>
+                  <p class="item-price">$79.99</p>
+                </div>
+              </div>
+            </div>
+            <div class="order-footer">
+              <div class="order-total">
+                <p>Total: <span>$79.99</span></p>
+              </div>
+              <div class="order-actions">
+                <button class="btn-secondary">View Details</button>
+                <button class="btn-secondary">Buy Again</button>
+                <button class="btn-secondary">Leave Review</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-card">
+            <div class="order-header">
+              <div class="order-info">
+                <h3>Order #SE-10233922</h3>
+                <p>Placed on March 28, 2025</p>
+              </div>
+              <div class="order-status">
+                <span class="status delivered">Delivered</span>
+                <p class="delivery-date">Delivered on April 2, 2025</p>
+              </div>
+            </div>
+            <div class="order-items">
+              <div class="order-item">
+                <div class="item-image">
+                  <img src="/api/placeholder/80/80" alt="Wireless Keyboard" />
+                </div>
+                <div class="item-details">
+                  <h4>Wireless Keyboard</h4>
+                  <p class="item-meta">Layout: US | Qty: 1</p>
+                  <p class="item-price">$49.99</p>
+                </div>
+              </div>
+              <div class="order-item">
+                <div class="item-image">
+                  <img src="/api/placeholder/80/80" alt="Wireless Mouse" />
+                </div>
+                <div class="item-details">
+                  <h4>Wireless Mouse</h4>
+                  <p class="item-meta">Color: Black | Qty: 1</p>
+                  <p class="item-price">$29.99</p>
+                </div>
+              </div>
+            </div>
+            <div class="order-footer">
+              <div class="order-total">
+                <p>Total: <span>$79.98</span></p>
+              </div>
+              <div class="order-actions">
+                <button class="btn-secondary">View Details</button>
+                <button class="btn-secondary">Buy Again</button>
+                <button class="btn-secondary">Leave Review</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="next">Next <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Account</h3>
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="orders.html">Order History</a></li>
+            <li><a href="tracking.html">Track Order</a></li>
+            <li><a href="#">Wishlist</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ShopEase. All rights reserved.</p>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+        <div class="payment-methods">
+          <img src="/api/placeholder/240/40" alt="Payment Methods" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+  </head>
+  <body>
+    <div class="header-container">
+      <div class="logo">
+        <h1>ShopEase</h1>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search products..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="orders.html">My Orders</a>
+        <a href="tracking.html" class="active">Track Order</a>
+        <a href="checkout.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">3</span>
+        </a>
+        <a href="#" class="account-icon">
+          <i class="fas fa-user"></i>
+        </a>
+      </nav>
+    </div>
+  </header>
+    <div class="payment-section">
+      <div class="card-icons">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-amex"></i>
+        <i class="fab fa-cc-discover"></i>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group half-width">
+          <label for="expiry-date">Expiry Date</label>
+          <input type="text" id="expiry-date" placeholder="MM/YY" />
+        </div>
+        <div class="form-group half-width">
+          <label for="cvv">CVV</label>
+          <div class="cvv-input">
+            <input type="text" id="cvv" placeholder="123" />
+            <i class="fas fa-question-circle tooltip-icon"></i>
+            <div class="tooltip">
+              3-digit security code on the back of your card
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group checkbox">
+          <input type="checkbox" id="save-card" />
+          <label for="save-card">Save this card for future purchases</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="payment-tab-content" id="paypal">
+      <div class="paypal-content">
+        <div class="paypal-logo">
+          <i class="fab fa-paypal fa-3x"></i>
+        </div>
+        <p>
+          Click the button below to log in to your PayPal account and complete
+          your purchase.
+        </p>
+        <button class="btn-paypal">Pay with PayPal</button>
+      </div>
+    </div>
+
+    <div class="payment-tab-content" id="apple-pay">
+      <div class="apple-pay-content">
+        <div class="apple-pay-logo">
+          <i class="fab fa-apple-pay fa-3x"></i>
+        </div>
+        <p>Click the button below to use Apple Pay for this purchase.</p>
+        <button class="btn-apple-pay">Pay with Apple Pay</button>
+      </div>
+    </div>
+
+    <div class="billing-section">
+      <h2>Billing Address</h2>
+      <div class="billing-options">
+        <div class="form-group checkbox">
+          <input type="checkbox" id="same-address" checked />
+          <label for="same-address">Same as shipping address</label>
+        </div>
+        <div class="different-billing" style="display: none">
+          <!-- Billing address form would appear here when unchecked -->
+        </div>
+      </div>
+    </div>
+
+    <div class="checkout-sidebar">
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <div class="summary-items">
+          <div class="summary-item">
+            <div class="item-img">
+              <img src="/api/placeholder/60/60" alt="Wireless Headphones" />
+              <span class="item-quantity">1</span>
+            </div>
+            <div class="item-info">
+              <h4>Wireless Headphones</h4>
+              <p>Color: Black</p>
+            </div>
+            <div class="item-price">$89.99</div>
+          </div>
+
+          <div class="summary-item">
+            <div class="item-img">
+              <img src="/api/placeholder/60/60" alt="Smart Watch" />
+              <span class="item-quantity">1</span>
+            </div>
+            <div class="item-info">
+              <h4>Smart Watch</h4>
+              <p>Color: Silver</p>
+            </div>
+            <div class="item-price">$199.99</div>
+          </div>
+
+          <div class="summary-item">
+            <div class="item-img">
+              <img src="/api/placeholder/60/60" alt="Laptop Backpack" />
+              <span class="item-quantity">1</span>
+            </div>
+            <div class="item-info">
+              <h4>Laptop Backpack</h4>
+              <p>Color: Navy Blue</p>
+            </div>
+            <div class="item-price">$59.99</div>
+          </div>
+        </div>
+
+        <div class="promo-code">
+          <div class="promo-input">
+            <input type="text" placeholder="Enter promo code" />
+            <button class="btn-apply">Apply</button>
+          </div>
+        </div>
+
+        <div class="summary-totals">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span>$349.97</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span>Free</span>
+          </div>
+          <div class="summary-row">
+            <span>Tax</span>
+            <span>$29.75</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span>$379.72</span>
+          </div>
+        </div>
+
+        <div class="checkout-actions">
+          <button class="btn-primary btn-checkout">Place Order</button>
+          <p class="terms-agreement">
+            By placing your order, you agree to our
+            <a href="#">Terms of Service</a> and
+            <a href="#">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="order-help">
+        <h3>Need Help?</h3>
+        <ul>
+          <li>
+            <a href="#"
+              ><i class="fas fa-phone"></i> Contact Customer Support</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-truck"></i> Shipping Information</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-exchange-alt"></i> Returns Policy</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="secure-payment">
+        <div class="secure-icons">
+          <i class="fas fa-lock"></i>
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <p>
+          Your payment information is processed securely. We do not store credit
+          card details nor have access to your credit card information.
+        </p>
+      </div>
+    </div>
+
+    <footer class="checkout-footer">
+      <div class="footer-bottom">
+        <p>&copy; 2025 ShopEase. All rights reserved.</p>
+        <div class="payment-methods">
+          <img src="/api/placeholder/240/40" alt="Payment Methods" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

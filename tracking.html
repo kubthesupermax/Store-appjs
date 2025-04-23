@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track Your Order - ShopEase</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <h1>ShopEase</h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search products..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="orders.html">My Orders</a>
+          <a href="tracking.html" class="active">Track Order</a>
+          <a href="checkout.html" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">3</span>
+          </a>
+          <a href="#" class="account-icon">
+            <i class="fas fa-user"></i>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-container">
+      <div class="page-header">
+        <h1>Track Your Order</h1>
+        <p>Enter your order number to get status updates</p>
+      </div>
+
+      <div class="tracking-container">
+        <div class="tracking-form">
+          <form>
+            <div class="form-group">
+              <label for="order-number">Order Number</label>
+              <input
+                type="text"
+                id="order-number"
+                placeholder="e.g., SE-10234567"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email used for order"
+              />
+            </div>
+            <button type="submit" class="btn-primary">Track Order</button>
+          </form>
+        </div>
+
+        <!-- Example tracking result (initially hidden with CSS) -->
+        <div class="tracking-result">
+          <div class="order-info">
+            <div class="order-detail">
+              <h3>Order #SE-10234567</h3>
+              <p>Placed on April 19, 2025</p>
+              <p>Estimated delivery: April 24, 2025</p>
+            </div>
+            <div class="order-items-preview">
+              <img src="/api/placeholder/60/60" alt="Product thumbnail" />
+              <img src="/api/placeholder/60/60" alt="Product thumbnail" />
+              <span>+1 more</span>
+            </div>
+          </div>
+
+          <div class="tracking-timeline">
+            <div class="timeline-step complete">
+              <div class="step-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="step-content">
+                <h4>Order Placed</h4>
+                <p>April 19, 2025 at 9:24 AM</p>
+              </div>
+            </div>
+            <div class="timeline-step complete">
+              <div class="step-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="step-content">
+                <h4>Payment Confirmed</h4>
+                <p>April 19, 2025 at 9:30 AM</p>
+              </div>
+            </div>
+            <div class="timeline-step complete">
+              <div class="step-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="step-content">
+                <h4>Processing</h4>
+                <p>April 20, 2025 at 10:15 AM</p>
+              </div>
+            </div>
+            <div class="timeline-step active">
+              <div class="step-icon">
+                <i class="fas fa-box"></i>
+              </div>
+              <div class="step-content">
+                <h4>Shipped</h4>
+                <p>April 21, 2025 at 2:45 PM</p>
+                <div class="carrier-info">
+                  <p>Carrier: Express Shipping</p>
+                  <p>Tracking ID: <a href="#">EXP123456789</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="step-icon">
+                <i class="fas fa-truck"></i>
+              </div>
+              <div class="step-content">
+                <h4>Out for Delivery</h4>
+                <p>Expected April 23, 2025</p>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="step-icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="step-content">
+                <h4>Delivered</h4>
+                <p>Expected April 24, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tracking-map">
+            <h3>Package Location</h3>
+            <div class="map-placeholder">
+              <img src="/api/placeholder/600/300" alt="Map" />
+              <div class="current-location-dot"></div>
+            </div>
+            <div class="location-details">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Your package is at:
+                <strong>Regional Distribution Center, Chicago</strong>
+              </p>
+              <p>
+                <i class="fas fa-clock"></i> Last updated:
+                <strong>April 22, 2025 at 8:30 AM</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="tracking-actions">
+            <button class="btn-secondary">
+              <i class="fas fa-print"></i> Print
+            </button>
+            <button class="btn-secondary">
+              <i class="fas fa-envelope"></i> Email Updates
+            </button>
+            <button class="btn-secondary">
+              <i class="fas fa-question-circle"></i> Help
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tracking-faq">
+        <h3>Frequently Asked Questions</h3>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>How long does shipping take?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Standard shipping typically takes 3-5 business days. Express
+              shipping takes 1-2 business days.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>What if my package is delayed?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              If your package is delayed, you will receive an email notification
+              with updated delivery information.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Can I change my delivery address?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Once an order has been shipped, you cannot change the delivery
+              address. Please contact customer support for assistance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Account</h3>
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="orders.html">Order History</a></li>
+            <li><a href="tracking.html">Track Order</a></li>
+            <li><a href="#">Wishlist</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ShopEase. All rights reserved.</p>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+        <div class="payment-methods">
+          <img src="/api/placeholder/240/40" alt="Payment Methods" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
