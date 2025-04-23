@@ -1,7 +1,7 @@
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 import { renderStars } from "./utils/stars.js";
-import { cart } from "../data/cart.js";
+import { cart, addTocart } from "../data/cart.js";
 
 const productsGrid = document.querySelector(".js-products-grid");
 
@@ -45,6 +45,19 @@ productsGrid.innerHTML = productsHtml;
 
 document.querySelectorAll(".js-add-to-cart").forEach((button) => {
   button.addEventListener("click", () => {
-    console.log("Added to cart");
+    // When we click on the button, we need to know which product it is
+    const productId = button.dataset.productId;
+    addTocart(productId);
+
+    let cartQuantity = 0;
+
+    cart.forEach((item) => {
+      cartQuantity += item.quantity;
+    });
+
+    document.querySelector(".js-cart-count").innerHTML = cartQuantity;
+
+    console.log(cartQuantity);
+    // console.log(cart);
   });
 });
