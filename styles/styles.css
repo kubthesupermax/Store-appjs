@@ -1648,3 +1648,21 @@ footer {
     border-bottom: 1px solid var(--primary-color);
   }
 }
+
+/* Product rating edit */
+.product-rating-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product-rating-stars {
+  width: 100px;
+  margin-right: 6px;
+}
+
+.product-rating-count {
+  color: rgb(1, 124, 182);
+  cursor: pointer;
+  margin-top: 3px;
+}
