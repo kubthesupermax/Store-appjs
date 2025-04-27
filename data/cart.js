@@ -13,9 +13,9 @@ export const addTocart = (productId) => {
   let matchingItem;
 
   // Check if the product is already in the cart
-  cart.forEach((item) => {
-    if (item.productId === productId) {
-      matchingItem = item;
+  cart.forEach((cartItem) => {
+    if (cartItem.productId === productId) {
+      matchingItem = cartItem;
     }
   });
 
