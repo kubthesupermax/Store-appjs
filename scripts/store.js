@@ -3,6 +3,10 @@ import { formatCurrency } from "./utils/money.js";
 import { renderStars } from "./utils/stars.js";
 import { cart, addTocart } from "../data/cart.js";
 
+// import * as cartModule from "../data/cart.js";
+// // console.log(cartModule);
+// cartModule.addTocart("c6e4e792-5c42-4ff0-981d-84a36df20d43");
+
 const productsGrid = document.querySelector(".js-products-grid");
 
 let productsHtml = ``;
