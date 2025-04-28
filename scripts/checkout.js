@@ -19,8 +19,10 @@ cart.forEach((cartItem) => {
 
   cartSummaryHTML += `          <div class="summary-item">
             <div class="item-img">
-              <img src="/api/placeholder/60/60" alt="Wireless Headphones" />
-              <span class="item-quantity">1</span>
+              <img src="${matchingProduct.image}" alt="${
+    matchingProduct.name
+  }" />
+              <span class="item-quantity">${cartItem.quantity}</span>
             </div>
             <div class="item-info">
               <h4>${matchingProduct.name}</h4>
@@ -34,3 +36,5 @@ cart.forEach((cartItem) => {
 
   console.log(cartSummaryHTML);
 });
+
+document.querySelector(".js-summary-items").innerHTML = cartSummaryHTML;
